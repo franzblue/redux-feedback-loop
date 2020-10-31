@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class Support extends Component {
     render() {
         return(
-            <h4>Support</h4>
+            <h2>How well are you being supported?</h2>
         )
     }
 }

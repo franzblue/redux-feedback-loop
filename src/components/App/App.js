@@ -4,6 +4,7 @@ import './App.css';
 import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
+import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
         <Feeling />
         <Understanding />
         <Support />
+        <Comments />
         <Review />
       </div>
     );

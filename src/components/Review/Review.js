@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class Review extends Component {
     render() {
         return(
-            <h4>Review</h4>
+            <h2>Review Your Feedback</h2>
         )
     }
 }

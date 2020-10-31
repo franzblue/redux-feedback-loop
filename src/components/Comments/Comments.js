@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class Feeling extends Component {
+class Comments extends Component {
     render() {
         return(
-            <h2>How are you feeling today?</h2>
+            <h2>Any comments you want to leave?</h2>
         )
     }
 }
 
-export default Feeling;
+export default Comments;

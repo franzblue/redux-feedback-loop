@@ -14,12 +14,9 @@
     - [] HashRouter as Router, Route, Link
 - [] import Component requirements
     - [] import { withRouter } from 'react-router-dom';
-- [] set up DB
-    - [] create table
-
-
-
-
+    - [] connect
+- [x] set up DB
+    - [x] create table
 
 
 ## COMPONENTS
@@ -35,9 +32,16 @@
     - [] F, U and S Components can share
     - [] Next button
 - [] Review Component
+    - [] displays all data from previous inputs
     - [] Submit button
         - [] sends feedback data to server
         - [] when clicked, save submission in DB
         - [] alert user of success
         - [] button to take new survey
             - [] reset all data and return to first step
+
+
+## REDUX
+- [] components dispatch data to store
+    - [] store holds onto data in array until submit is clicked
+        - [] then sends all data to DB

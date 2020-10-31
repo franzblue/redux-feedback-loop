@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class Understanding extends Component {
     render() {
         return(
-            <h4>Understanding</h4>
+            <h2>How well are you understanding the content?</h2>
         )
     }
 }
