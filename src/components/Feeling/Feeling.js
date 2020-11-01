@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class Feeling extends Component {
 
     state = {
-        feeling: ''
+        feelingValue: ''
     }
     
     nextPage = () => {
@@ -17,7 +17,7 @@ class Feeling extends Component {
     handleChange = (event) => {
         console.log('consoling some log', event.target.value);
         this.setState({
-            feeling: event.target.value
+            feelingValue: event.target.value
           })
     }
 
