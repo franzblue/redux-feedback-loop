@@ -19,12 +19,10 @@ class Review extends Component {
     submit = () => {
         console.log('in submit', this.state);
         this.setState( {
-            // state: {
-                feeling: this.props.reduxStore.feelingReducer.feelingValue,
-                understanding: this.props.reduxStore.understandingReducer.understandingValue,
-                support: this.props.reduxStore.supportReducer.supportValue,
+                feeling: Number(this.props.reduxStore.feelingReducer.feelingValue),
+                understanding: Number(this.props.reduxStore.understandingReducer.understandingValue),
+                support: Number(this.props.reduxStore.supportReducer.supportValue),
                 comments: this.props.reduxStore.commentsReducer.commentsValue,
-            // }
         })
         console.log('post submit', this.state)
         // axios POST this.state to database
