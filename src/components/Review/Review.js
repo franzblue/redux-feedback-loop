@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import swal from 'sweetalert';
+import {HashRouter as Router, Link} from 'react-router-dom';
 
 
 class Review extends Component {
@@ -38,17 +39,26 @@ class Review extends Component {
 
     render() {
         return(
-            <div>
-                <h2>Review Your Feedback</h2>
-            
-                <p>Feeling: {this.props.reduxStore.feelingReducer.feelingValue}</p>
-                <p>Understanding: {this.props.reduxStore.understandingReducer.understandingValue}</p>
-                <p>Support: {this.props.reduxStore.supportReducer.supportValue}</p>
-                <p>Comments: {this.props.reduxStore.commentsReducer.commentsValue}</p>
+            <Router>
+                <div>
+                    <h2>Review Your Feedback</h2>
+                
+                    <p>Feeling: {this.props.reduxStore.feelingReducer.feelingValue}</p>
+                    <p>Understanding: {this.props.reduxStore.understandingReducer.understandingValue}</p>
+                    <p>Support: {this.props.reduxStore.supportReducer.supportValue}</p>
+                    <p>Comments: {this.props.reduxStore.commentsReducer.commentsValue}</p>
+                    <button onClick={this.submit}>Submit</button>
 
-                <button onClick={this.submit}>Submit</button>
-            </div>
-            
+                    <h2>Need to change an answer?</h2>
+                    <p>Select a link below to edit response.</p>
+                    <ul>
+                        <li><Link to="/">Feeling</Link></li>
+                        <li><Link to="/2">Understanding</Link></li>
+                        <li><Link to="/3">Support</Link></li>
+                        <li><Link to="/4">Comments</Link></li>
+                    </ul>
+                </div>
+            </Router>
         )
     }
 }

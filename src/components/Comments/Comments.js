@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Links from '../Links/Links';
 
 class Comments extends Component {
 
@@ -27,9 +26,8 @@ class Comments extends Component {
             <div>
                 <h2>Any comments you want to leave?</h2>
                 <p>Feel free to tell us how you really feel.</p>
-                <input type="text" onChange={this.handleChange}/>
+                <input type="text" onChange={this.handleChange} placeholder="comment"/>
                 <button onClick={this.nextPage}>Next</button>
-                <Links />
             </div>
            
         )

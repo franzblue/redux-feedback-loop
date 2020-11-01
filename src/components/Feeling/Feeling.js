@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import swal from 'sweetalert';
-import Links from '../Links/Links';
 
 class Feeling extends Component {
 
@@ -34,9 +33,8 @@ class Feeling extends Component {
             <div>
                 <h2>How are you feeling today?</h2>
                 <p>Please enter a number one through six.</p>
-                <input type="number" onChange={this.handleChange}/>
+                <input type="number" onChange={this.handleChange} placeholder="1-6"/>
                 <button onClick={this.nextPage}>Next</button>
-                <Links />
             </div>
         )
     }
