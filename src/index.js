@@ -48,13 +48,21 @@ const commentsReducer = (state=[], action) => {
     return state;
 }
 
+const adminReducer = (state=[], action) => {
+    if( action.type === 'DATABASE') {
+        return action.payload
+    }
+    return state;
+}
+
 
 const storeInstance = createStore(
     combineReducers({
         feelingReducer,
         understandingReducer,
         supportReducer,
-        commentsReducer
+        commentsReducer,
+        adminReducer
     }),
   applyMiddleware(logger)
 );
