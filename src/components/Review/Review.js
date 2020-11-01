@@ -1,7 +1,40 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import axios from 'axios';
+
 
 class Review extends Component {
+
+    state = {
+        feeling: '',
+        understanding: '',
+        support: '',
+        comments: '',
+    }
+
+    componentDidMount = () => {
+        this.submit();
+    }
+
+    submit = () => {
+        console.log('in submit', this.state);
+        this.setState( {
+            // state: {
+                feeling: this.props.reduxStore.feelingReducer.feelingValue,
+                understanding: this.props.reduxStore.understandingReducer.understandingValue,
+                support: this.props.reduxStore.supportReducer.supportValue,
+                comments: this.props.reduxStore.commentsReducer.commentsValue,
+            // }
+        })
+        console.log('post submit', this.state)
+        // axios POST this.state to database
+        axios.post('/feedback', this.state).then((response) => {
+            console.log('back from POST', response);
+        }).catch((error) => {
+            console.log('error from POST', error);
+        })
+    }
+
     render() {
         return(
             <div>
@@ -12,16 +45,14 @@ class Review extends Component {
                 <p>Support: {this.props.reduxStore.supportReducer.supportValue}</p>
                 <p>Comments: {this.props.reduxStore.commentsReducer.commentsValue}</p>
 
-                <button>Submit</button>
+                <button onClick={this.submit}>Submit</button>
             </div>
             
         )
     }
 }
 
-
 // need access to reduxStore to display selected values to user for review
-
 
 const putReduxStateOnProps = (reduxStore) => ({
     reduxStore
