@@ -29,6 +29,7 @@
 - [] Comments
     Text input
 - [] Input Fields Component
+    - [] alert user if fields are empty
     - [] F, U and S Components can share
     - [] Next button
 - [] Review Component
