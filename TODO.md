@@ -21,28 +21,28 @@
 
 ## COMPONENTS
 - [] Feeling
-    - [] Number input
+    - [x] Number input
 - [] Understanding
-    - [] Nunber input
+    - [x] Nunber input
 - [] Support
-    - [] Number input
+    - []x Number input
 - [] Comments
-    Text input
+    - [x] Text input
 - [] Input Fields Component
     - [] alert user if fields are empty
     - [] F, U and S Components can share
-    - [] Next button
+    - [x] Next button
 - [] Review Component
     - [] displays all data from previous inputs
     - [] Submit button
-        - [] sends feedback data to server
-        - [] when clicked, save submission in DB
-        - [] alert user of success
+        - [x] sends feedback data to server
+        - [x] when clicked, save submission in DB
+        - [x] alert user of success
         - [] button to take new survey
             - [] reset all data and return to first step
 
 
 ## REDUX
-- [] components dispatch data to store
-    - [] store holds onto data in array until submit is clicked
-        - [] then sends all data to DB
+- [x] components dispatch data to store
+    - [x] store holds onto data in array until submit is clicked
+        - [x] then sends all data to DB

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import swal from 'sweetalert';
 
 
 class Review extends Component {
@@ -28,6 +29,8 @@ class Review extends Component {
         // axios POST this.state to database
         axios.post('/feedback', this.state).then((response) => {
             console.log('back from POST', response);
+            swal("Thank you!", "Your feedback has been submitted!", "success");
+            this.props.history.push('/6');
         }).catch((error) => {
             console.log('error from POST', error);
         })

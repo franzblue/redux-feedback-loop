@@ -11,11 +11,19 @@ const feelingReducer = (state=[], action) => {
     if( action.type === 'FEELING') {
         return action.payload
     }
+    if( action.type === 'CLEAR'){
+        state = [];
+        return state;
+    }
     return state;
 }
 const understandingReducer = (state=[], action) => {
     if( action.type === 'UNDERSTANDING') {
         return action.payload
+    }
+    if( action.type === 'CLEAR'){
+        state = [];
+        return state;
     }
     return state;
 }
@@ -23,11 +31,19 @@ const supportReducer = (state=[], action) => {
     if( action.type === 'SUPPORT') {
         return action.payload
     }
+    if( action.type === 'CLEAR'){
+        state = [];
+        return state;
+    }
     return state;
 }
 const commentsReducer = (state=[], action) => {
     if( action.type === 'COMMENTS') {
         return action.payload
+    }
+    if( action.type === 'CLEAR'){
+        state = [];
+        return state;
     }
     return state;
 }
