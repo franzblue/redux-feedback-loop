@@ -47,3 +47,9 @@
 - [x] components dispatch data to store
     - [x] store holds onto data in array until submit is clicked
         - [x] then sends all data to DB
+
+
+## STRETCH GOALS
+- [x] allow user to edit responses
+    - [x] links to previous pages
+    - [x] maintain empty input validation
