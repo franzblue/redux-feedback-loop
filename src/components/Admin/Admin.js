@@ -29,11 +29,9 @@ class Admin extends Component {
     render() {
         return(
             <>
-            {/* {JSON.stringify(this.props.reduxStore.adminReducer)} */}
             <table>
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Feeling</th>
                         <th>Understanding</th>
                         <th>Support</th>
@@ -42,11 +40,11 @@ class Admin extends Component {
                     </tr>
                 </thead>
                 <tbody id="tableBody">
-                    <AdminItem />
+                    <AdminItem getDB={this.getDB}/>
                 </tbody>
                 <tfoot>
                     <tr id="foot">
-                        <td colSpan="6"></td>
+                        <td colSpan="5"></td>
                     </tr>
                 </tfoot>
             </table>

@@ -2,19 +2,25 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class AdminItem extends Component {
+
+    delete = () => {
+        console.log('clicked delete', this.props.reduxStore.adminReducer);
+        // this.props.dispatch({type: 'DELETE', payload: this.props.item.id});
+        // this.props.getDB();
+    }
+
     render() {
         return(
             <>
-            {this.props.reduxStore.adminReducer
-            .map( (item, index) => 
+            {this.props.reduxStore.adminReducer.map( (item, index) => 
             <tr key={index}>
-                <td>{item.id}</td>
                 <td>{item.feeling}</td>
                 <td>{item.understanding}</td>
                 <td>{item.support}</td>
                 <td>{item.comments}</td>
-                <td>🗑️ </td>
-            </tr> )}
+                <td onClick={this.delete}>🗑️ </td>
+            </tr> 
+            )}
             </>
         )
     }
@@ -25,10 +31,3 @@ const putReduxStateOnProps = (reduxStore) => ({
 });
 
 export default connect(putReduxStateOnProps)(AdminItem);
-
-
-//             // this.response.data.map(item => { })
-
-//             // { props.reduxStore.bookList.map( (book, index) => 
-//             //     <li key={index}>{book.title} by {book.author}</li>  
-//             //   )}
