@@ -17,3 +17,10 @@
   font-size: large;
 }
 
+div {
+  text-align: center;
+}
+
+button {
+  margin: 20px;
+}

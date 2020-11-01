@@ -17,3 +17,16 @@ const storeInstance = createStore(
 
 ReactDOM.render(<Provider store={storeInstance}><App /></Provider>, document.getElementById('root'));
 registerServiceWorker();
+
+
+
+
+// reducer pieces
+
+
+// to clear inputs
+// if(action.type === 'CLEAR_ORDER'){
+//     state = [];
+//     return state;
+// }
+// return state;

@@ -10,8 +10,8 @@
     - [x] combineReducers
     - [x] provider
 - [] import App.js requirements
-    - [] connect
-    - [] HashRouter as Router, Route, Link
+    - [x] connect
+    - [x] HashRouter as Router, Route, Link
 - [] import Component requirements
     - [] import { withRouter } from 'react-router-dom';
     - [] connect

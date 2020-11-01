@@ -5,7 +5,12 @@ class Comments extends Component {
 
     render() {
         return(
-            <h2>Any comments you want to leave?</h2>
+            <div>
+                <h2>Any comments you want to leave?</h2>
+                <input type="text"/>
+                <button onClick={this.nextPage}>Next</button>
+            </div>
+           
         )
     }
 }
