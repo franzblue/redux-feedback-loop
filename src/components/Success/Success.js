@@ -14,7 +14,7 @@ class Success extends Component {
             <div>
                 <h2>Your feedback is important.</h2>
                 <h3>Would you like to take another survey?</h3>
-                <button onClick={this.nextPage}>Next</button>
+                <button onClick={this.nextPage}>New Survey</button>
             </div>
         )
     }

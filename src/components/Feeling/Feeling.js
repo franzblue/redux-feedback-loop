@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import swal from 'sweetalert';
 
 class Feeling extends Component {
 
@@ -8,10 +9,16 @@ class Feeling extends Component {
     }
     
     nextPage = () => {
-        console.log('check', this.props.history, this.state.feeling);
+        console.log('check', this.props.history, this.state.feelingValue);
         // not sure if this dispatch should be this.state or this.state.feeling
-        this.props.dispatch( {type: 'FEELING', payload: this.state})
-        this.props.history.push('/2');
+        if(this.state.feelingValue === '' || this.state.feelingValue === null || this.state.feelingValue === undefined
+                 || this.state.feelingValue < 1 || this.state.feelingValue > 6) {
+            swal("Oops!", "Please enter a value between 1 and 6", "warning");
+        }
+        else {
+            this.props.dispatch( {type: 'FEELING', payload: this.state})
+            this.props.history.push('/2');
+        } 
     }
 
     handleChange = (event) => {
@@ -25,6 +32,7 @@ class Feeling extends Component {
         return(
             <div>
                 <h2>How are you feeling today?</h2>
+                <p>Please enter a number one through six.</p>
                 <input type="number" onChange={this.handleChange}/>
                 <button onClick={this.nextPage}>Next</button>
             </div>

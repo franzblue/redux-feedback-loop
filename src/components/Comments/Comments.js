@@ -8,7 +8,7 @@ class Comments extends Component {
     }
 
     nextPage = () => {
-        console.log('check', this.props.history, this.state.feeling);
+        console.log('check', this.props.history, this.state.commentsValue);
         // not sure if this dispatch should be this.state or this.state.feeling
         this.props.dispatch( {type: 'COMMENTS', payload: this.state})
         this.props.history.push('/5');

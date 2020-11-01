@@ -14,7 +14,8 @@
     - [x] HashRouter as Router, Route, Link
 - [] import Component requirements
     - [] import { withRouter } from 'react-router-dom';
-    - [] connect
+    - [x] connect
+    - [x] sweetalert
 - [x] set up DB
     - [x] create table
 
@@ -29,17 +30,17 @@
 - [] Comments
     - [x] Text input
 - [] Input Fields Component
-    - [] alert user if fields are empty
+    - [x] alert user if fields are empty
     - [] F, U and S Components can share
     - [x] Next button
 - [] Review Component
-    - [] displays all data from previous inputs
-    - [] Submit button
+    - [x] displays all data from previous inputs
+    - [x] Submit button
         - [x] sends feedback data to server
         - [x] when clicked, save submission in DB
         - [x] alert user of success
-        - [] button to take new survey
-            - [] reset all data and return to first step
+        - [x] button to take new survey
+            - [x] reset all data and return to first step
 
 
 ## REDUX
