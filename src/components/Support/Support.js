@@ -19,4 +19,4 @@ class Support extends Component {
     }
 }
 
-export default Support;
+export default connect()(Support);

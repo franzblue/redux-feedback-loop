@@ -19,4 +19,4 @@ class Understanding extends Component {
     }
 }
 
-export default Understanding;
+export default connect()(Understanding);

@@ -9,4 +9,4 @@ class Review extends Component {
     }
 }
 
-export default Review;
+export default connect()(Review);

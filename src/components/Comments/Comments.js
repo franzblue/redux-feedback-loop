@@ -15,4 +15,4 @@ class Comments extends Component {
     }
 }
 
-export default Comments;
+export default connect()(Comments);
