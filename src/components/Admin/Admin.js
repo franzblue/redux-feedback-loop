@@ -40,7 +40,8 @@ class Admin extends Component {
                     </tr>
                 </thead>
                 <tbody id="tableBody">
-                    <AdminItem getDB={this.getDB}/>
+                {this.props.reduxStore.adminReducer.map( (item, index) =>
+                    <tr key={index}><AdminItem item={item} getDB={this.getDB}/></tr>)}
                 </tbody>
                 <tfoot>
                     <tr id="foot">
