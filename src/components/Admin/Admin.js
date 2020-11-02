@@ -37,6 +37,7 @@ class Admin extends Component {
                         <th>Support</th>
                         <th>Comments</th>
                         <th>Delete</th>
+                        <th>Flag</th>
                     </tr>
                 </thead>
                 <tbody id="tableBody">

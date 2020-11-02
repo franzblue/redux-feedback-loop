@@ -15,6 +15,8 @@ class Review extends Component {
     }
 
     componentDidMount = () => {
+        // I get an error when I try to POST to database 
+        // unless I call this function on componentDidMount
         this.submit();
     }
 

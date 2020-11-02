@@ -39,8 +39,20 @@ router.delete('/:idParam', (req, res) => {
     console.log("hello from DELETE", req.params.idParam);
     // res.sendStatus(200);
     let queryText = `DELETE FROM "feedback" WHERE "id" = $1`;
-
     pool.query(queryText, [req.params.idParam])
+    .then((result) => {
+        console.log('Success!', result);
+        res.sendStatus(200);
+    }).catch((error) => {
+        console.log('error in delete', error);
+        res.sendStatus(500)
+    });
+});
+
+router.put('/:idParam', (req, res) => {
+    console.log("hello from PUT", req.params.idParam);
+    let queryText = `UPDATE "feedback" SET "flagged" = true WHERE "id" = $1;`;
+        pool.query(queryText, [req.params.idParam])
     .then((result) => {
         console.log('Success!', result);
         res.sendStatus(200);
