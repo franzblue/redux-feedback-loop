@@ -9,8 +9,6 @@ class Support extends Component {
     }
 
     nextPage = () => {
-        console.log('check', this.props.history, this.state.supportValue);
-        // not sure if this dispatch should be this.state or this.state.feeling
         if(this.state.supportValue === '' || this.state.supportValue === null || this.state.supportValue === undefined 
                  || this.state.supportValue < 1 || this.state.supportValue > 6) {
             swal("Oops!", "Please enter a value between 1 and 6", "warning");

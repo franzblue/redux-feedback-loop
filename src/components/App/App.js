@@ -23,6 +23,7 @@ class App extends Component {
           <br/>
         </div>
 
+        {/* routes for seperate pages */}
         <Route exact path="/" component={Feeling}/>
         <Route exact path="/2" component={Understanding}/>
         <Route exact path="/3" component={Support}/>

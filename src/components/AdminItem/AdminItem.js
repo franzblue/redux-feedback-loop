@@ -5,6 +5,9 @@ import swal from 'sweetalert';
 
 class AdminItem extends Component {
 
+    // DELETE request to delete feedback
+    // sweetalert to verify with user
+    // targets feedback id value
     delete = () => {
         swal({
             title: "Are you sure?",
@@ -32,6 +35,8 @@ class AdminItem extends Component {
         });
     } 
 
+    // function to flag feedback
+    // uses PUT 
     flag = () => {
         swal({
             title: "Flag this entry?",
@@ -40,8 +45,8 @@ class AdminItem extends Component {
             buttons: true,
             dangerMode: true,
           })
-          .then((willDelete) => {
-            if (willDelete) {
+          .then((willFlag) => {
+            if (willFlag) {
                 console.log('clicked flag');
                 axios.put(`/feedback/${this.props.item.id}`).then((response) => {
                     console.log('put back from server', response);
@@ -56,6 +61,9 @@ class AdminItem extends Component {
           });
     }
 
+    // going to render a table row filled with table data populated by mapped out props
+    // conditional rendering will highlight flagged feedback
+    // two buttons at work, delete and flag
     render() {
         return(
             <>

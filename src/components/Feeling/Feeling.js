@@ -10,7 +10,6 @@ class Feeling extends Component {
     
     nextPage = () => {
         console.log('check', this.props.history, this.state.feelingValue);
-        // not sure if this dispatch should be this.state or this.state.feeling
         if(this.state.feelingValue === '' || this.state.feelingValue === null || this.state.feelingValue === undefined
                  || this.state.feelingValue < 1 || this.state.feelingValue > 6) {
             swal("Oops!", "Please enter a value between 1 and 6", "warning");

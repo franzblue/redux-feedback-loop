@@ -24,6 +24,7 @@ router.post('/', (req, res) => {
     })
 })
 
+// GET request to display in Admin Component
 router.get('/', (req, res) => {
     console.log('GET req.body', req.body);
     let queryText = 'SELECT * FROM "feedback" ORDER BY "id" DESC;';
@@ -35,6 +36,7 @@ router.get('/', (req, res) => {
     })
 })
 
+// DELETE request to delete feedback
 router.delete('/:idParam', (req, res) => {
     console.log("hello from DELETE", req.params.idParam);
     // res.sendStatus(200);
@@ -49,6 +51,7 @@ router.delete('/:idParam', (req, res) => {
     });
 });
 
+// PUT request to flag feedback for future reference
 router.put('/:idParam', (req, res) => {
     console.log("hello from PUT", req.params.idParam);
     let queryText = `UPDATE "feedback" SET "flagged" = true WHERE "id" = $1;`;

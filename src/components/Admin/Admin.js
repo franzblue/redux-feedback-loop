@@ -10,9 +10,11 @@ class Admin extends Component {
     }
 
     componentDidMount = () => {
+        // grab feedback from database
         this.getDB();
     }
 
+    // grab feedback from database
     getDB = () => {
         axios.get('/feedback').then((response) => {
             console.log('GET back from server', response.data);
@@ -28,7 +30,7 @@ class Admin extends Component {
 
     render() {
         return(
-            <>
+            // table to display feedback
             <table>
                 <thead>
                     <tr>
@@ -40,6 +42,7 @@ class Admin extends Component {
                         <th>Flagged</th>
                     </tr>
                 </thead>
+                {/* map through reduxStore to return feedback rows one by one */}
                 <tbody id="tableBody">
                 {this.props.reduxStore.adminReducer.map( (item, index) =>
                     <tr key={index}><AdminItem item={item} getDB={this.getDB}/></tr>)}
@@ -50,7 +53,6 @@ class Admin extends Component {
                     </tr>
                 </tfoot>
             </table>
-            </>
         )
     }
 }
