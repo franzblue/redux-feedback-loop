@@ -37,7 +37,7 @@ class Admin extends Component {
                         <th>Support</th>
                         <th>Comments</th>
                         <th>Delete</th>
-                        <th>Flag</th>
+                        <th>Flagged</th>
                     </tr>
                 </thead>
                 <tbody id="tableBody">
@@ -46,7 +46,7 @@ class Admin extends Component {
                 </tbody>
                 <tfoot>
                     <tr id="foot">
-                        <td colSpan="5"></td>
+                        <td colSpan="6"></td>
                     </tr>
                 </tfoot>
             </table>

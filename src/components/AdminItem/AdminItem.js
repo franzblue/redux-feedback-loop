@@ -52,8 +52,6 @@ class AdminItem extends Component {
                     swal("This feedback has been flagged!", {
                         icon: "success",
                     });
-            } else {
-              swal("You did not flag this entry.");
             }
           });
     }
@@ -66,7 +64,11 @@ class AdminItem extends Component {
                 <td>{this.props.item.support}</td>
                 <td>{this.props.item.comments}</td>
                 <td onClick={this.delete}><span role="img" aria-labelledby="trash bin">🗑️ </span></td>
-                <td onClick={this.flag}><span role="img" aria-labelledby="flag">🚩</span></td>
+                {this.props.item.flagged === true ?
+                    <td className="flagged" onClick={this.flag}><span role="img" aria-labelledby="flag">🚩</span></td>
+                :
+                    <td onClick={this.flag}><span role="img" aria-labelledby="flag">🚩</span></td>
+                }  
             </>
         )
     }
@@ -76,4 +78,4 @@ const putReduxStateOnProps = (reduxStore) => ({
     reduxStore
 });
 
-export default connect(putReduxStateOnProps)(AdminItem);
+export default connect(putReduxStateOnProps)(AdminItem); 
