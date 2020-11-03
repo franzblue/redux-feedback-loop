@@ -8,16 +8,10 @@ import {HashRouter as Router, Link} from 'react-router-dom';
 class Review extends Component {
 
     state = {
-        feeling: '',
-        understanding: '',
-        support: '',
-        comments: '',
-    }
-
-    componentDidMount = () => {
-        // I get an error when I try to POST to database 
-        // unless I call this function on componentDidMount
-        this.submit();
+        feeling: Number(this.props.reduxStore.feelingReducer.feelingValue),
+        understanding: Number(this.props.reduxStore.understandingReducer.understandingValue),
+        support: Number(this.props.reduxStore.supportReducer.supportValue),
+        comments: this.props.reduxStore.commentsReducer.commentsValue,
     }
 
     submit = () => {
